@@ -3,6 +3,3 @@ start:
 stop:
 	docker compose down
 
-deploy:
-	docker compose up -d --build --no-deps backend
-
