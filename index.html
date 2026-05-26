@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Catalog - App Landing</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #1f2937, #0f172a 55%);
+      color: #f8fafc;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(420px, 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 36px 24px;
+      display: grid;
+      gap: 28px;
+    }
+
+    .logo {
+      display: grid;
+      justify-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 170px;
+      height: 140px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-mark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .logo-text {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 650;
+      text-align: center;
+    }
+
+    .store-buttons {
+      display: grid;
+      gap: 12px;
+    }
+
+    .store-btn {
+      display: grid;
+      text-decoration: none;
+      border-radius: 14px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(15, 23, 42, 0.8);
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .store-btn:hover,
+    .store-btn:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(34, 211, 238, 0.7);
+      background: rgba(30, 41, 59, 0.95);
+      outline: none;
+    }
+
+    .store-label {
+      color: #cbd5e1;
+      font-size: 0.8rem;
+    }
+
+    .store-name {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .contact {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 18px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-title {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #cbd5e1;
+    }
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 6px;
+    }
+
+    .contact-link {
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus-visible {
+      color: #22d3ee;
+      outline: none;
+    }
+
+    @media (max-width: 420px) {
+      .card {
+        padding: 28px 18px;
+      }
+
+      .logo-mark {
+        width: 150px;
+        height: 122px;
+      }
+
+      .logo-text {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-label="App links">
+      <div class="logo" aria-label="App logo">
+        <div class="logo-mark">
+          <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 928" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <g transform="translate(0,928) scale(0.1,-0.1)" fill="#f8fafc" stroke="none">
+              <path d="M4639 6870 c-96 -16 -200 -88 -258 -178 -61 -96 -61 -90 -61 -924 l0 -758 105 0 105 0 2 753 c3 738 3 753 24 791 11 22 37 54 58 70 l38 31 893 3 894 2 3 -294 c4 -412 -24 -386 411 -386 l297 0 0 -600 0 -600 -1540 0 -1540 0 0 404 c0 420 -2 440 -43 485 -46 50 -89 61 -253 61 -139 0 -154 -2 -195 -23 -33 -18 -51 -37 -71 -76 l-28 -53 0 -1022 c0 -671 4 -1034 10 -1058 14 -50 55 -97 105 -119 33 -15 65 -19 180 -18 190 0 237 18 276 104 17 37 19 74 19 453 l0 412 1540 0 1541 0 -3 -719 -3 -719 -30 -44 c-17 -23 -51 -54 -75 -68 l-45 -25 -1160 0 -1160 0 -42 22 c-28 15 -52 39 -70 70 l-28 48 -3 603 -3 602 -105 0 -105 0 3 -632 3 -633 32 -67 c55 -117 162 -197 289 -218 86 -14 2312 -13 2389 1 113 21 230 101 275 189 53 104 50 14 48 1760 -3 1565 -4 1616 -22 1650 -20 37 -597 644 -650 684 -17 13 -49 29 -71 35 -47 13 -1901 14 -1976 1z"/>
+              <path d="M4975 5969 c-41 -12 -55 -35 -55 -87 0 -35 6 -49 29 -73 l29 -29 527 0 526 0 23 25 c30 32 39 75 24 116 -20 59 -24 59 -575 58 -274 0 -511 -5 -528 -10z"/>
+              <path d="M5490 5523 c-8 -3 -88 -78 -177 -166 l-163 -162 -73 73 c-64 64 -77 72 -110 72 -46 0 -82 -34 -92 -86 -8 -45 0 -58 113 -177 112 -119 113 -120 165 -112 38 6 61 25 254 218 l212 212 -9 39 c-14 61 -73 105 -120 89z"/>
+              <path d="M3032 5393 c-61 -30 -65 -51 -64 -308 1 -126 -1 -238 -4 -247 -5 -16 -19 -18 -115 -18 -106 0 -109 -1 -141 -29 l-33 -29 -3 -211 c-4 -288 -2 -292 183 -301 l110 -5 5 -240 c3 -132 9 -248 13 -257 5 -10 24 -27 42 -38 30 -19 47 -20 177 -18 l143 3 3 858 2 857 -142 0 c-112 0 -150 -4 -176 -17z"/>
+              <path d="M7650 5382 c-19 -9 -43 -33 -55 -52 -20 -34 -20 -49 -20 -780 0 -734 0 -746 21 -780 11 -19 35 -45 54 -57 30 -21 45 -23 159 -23 142 0 174 11 211 72 18 31 20 51 20 281 l0 247 114 0 c196 0 196 1 196 274 l0 196 -29 32 -29 33 -126 4 -126 3 0 232 c0 213 -2 234 -20 264 -37 61 -70 72 -210 72 -99 0 -132 -4 -160 -18z"/>
+              <path d="M5774 5360 c-47 -19 -69 -92 -43 -142 25 -46 48 -48 543 -48 l464 0 31 26 c27 22 31 32 31 75 0 40 -5 55 -25 74 l-24 25 -478 -1 c-263 0 -488 -4 -499 -9z"/>
+              <path d="M4952 3952 c-28 -22 -46 -81 -33 -113 5 -13 19 -33 31 -44 22 -20 36 -20 927 -20 l905 0 24 28 c33 39 33 95 -2 136 l-26 31 -901 0 c-842 0 -903 -2 -925 -18z"/>
+              <path d="M4979 3363 c-38 -6 -61 -35 -66 -87 -5 -40 -2 -48 25 -76 l30 -30 752 0 c832 0 797 -3 825 64 11 25 12 42 4 70 -19 68 9 66 -811 65 -403 -1 -745 -4 -759 -6z"/>
+            </g>
+          </svg>
+        </div>
+        <h1 class="logo-text">Workout Catalog</h1>
+      </div>
+
+      <div class="store-buttons">
+        <a class="store-btn app-store" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" aria-label="Download on App Store">
+          <span class="store-label">Download on</span>
+          <span class="store-name">App Store</span>
+        </a>
+
+        <a class="store-btn play-store" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+          <span class="store-label">Download on</span>
+          <span class="store-name">Google Play</span>
+        </a>
+      </div>
+
+      <section class="contact" aria-label="Contact">
+        <h2 class="contact-title">Contact</h2>
+        <ul class="contact-list">
+          <li><a class="contact-link" href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">instagram: @workoutcatalog.app</a></li>
+          <li><a class="contact-link" href="mailto:b2m.desenvolvimento@gmail.com">email: b2m.desenvolvimento@gmail.com</a></li>
+          <li><a class="contact-link" href="tel:5599984235600">phone: +55 (99) 98423-5600</a></li>
+          <li><a class="contact-link" href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">whatsapp: +55 (99) 98423-5600</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

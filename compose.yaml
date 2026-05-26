@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: workout-catalog-prod
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      # HTTPS router
+      - "traefik.http.routers.workout-catalog.rule=Host(`workoutcatalog.com`)"
+      - "traefik.http.routers.workout-catalog.entrypoints=websecure"
+      - "traefik.http.routers.workout-catalog.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.workout-catalog.priority=1"
+      - "traefik.http.services.workout-catalog.loadbalancer.server.port=80"
+      # HTTP to HTTPS redirect
+      - "traefik.http.routers.workout-catalog-http.rule=Host(`workoutcatalog.com`)"
+      - "traefik.http.routers.workout-catalog-http.entrypoints=web"
+      - "traefik.http.routers.workout-catalog-http.middlewares=rato-https-redirect"
+    depends_on:
+      database:
+        condition: service_healthy
+    networks:
+      - traefik-public
+      - workout-catalog-internal
+networks:
+  traefik-public:
+    external: true
+  workout-catalog-internal:
+    driver: bridge
+

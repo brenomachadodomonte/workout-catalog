@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Catalog - Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #1f2937, #0f172a 55%);
+      color: #f8fafc;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(900px, 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 24px;
+      padding: 28px;
+      display: grid;
+      gap: 20px;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      font-weight: 650;
+    }
+
+    .language-picker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    label {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    select {
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(15, 23, 42, 0.85);
+      color: #f8fafc;
+      padding: 8px 10px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+
+    .policy {
+      line-height: 1.6;
+      color: #e2e8f0;
+      font-size: 0.96rem;
+    }
+
+    .policy h2 {
+      margin: 20px 0 10px;
+      font-size: 1.08rem;
+      color: #f8fafc;
+    }
+
+    .policy p {
+      margin: 0 0 10px;
+    }
+
+    .policy ul {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+
+    .policy a {
+      color: #22d3ee;
+      text-decoration: none;
+    }
+
+    .policy a:hover,
+    .policy a:focus-visible {
+      color: #67e8f9;
+      outline: none;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 20px 16px;
+      }
+
+      h1 {
+        font-size: 1.35rem;
+      }
+
+      .header {
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-label="Privacy policy">
+      <div class="header">
+        <h1 id="policyTitle">Privacy Policy - Workout Catalog</h1>
+        <div class="language-picker">
+          <label for="language">Language</label>
+          <select id="language" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="pt">Português</option>
+          </select>
+        </div>
+      </div>
+      <article class="policy" id="policyContent"></article>
+    </section>
+  </main>
+
+  <script>
+    const policies = {
+      en: {
+        title: "Privacy Policy - Workout Catalog",
+        languageLabel: "Language",
+        html: `
+          <p><strong>Last updated:</strong> May 26, 2026</p>
+          <p>Welcome to the Workout Catalog app.</p>
+          <p>Your privacy is important. This Privacy Policy explains how the app collects, uses, stores, and protects user information.</p>
+          <p>By using the app, you agree to the terms of this Privacy Policy.</p>
+
+          <h2>1. Information Collected</h2>
+          <p>The app was designed to work with as little data collection as possible.</p>
+          <p><strong>Data stored locally</strong></p>
+          <p>The app allows users to:</p>
+          <ul>
+            <li>Create custom workouts;</li>
+            <li>Edit exercises;</li>
+            <li>Log sets, reps, weight, duration, and notes;</li>
+            <li>Organize workout routines.</li>
+          </ul>
+          <p>This data is stored locally on the user's device and is not sent to external servers.</p>
+
+          <h2>2. Data NOT Collected</h2>
+          <p>The app does not collect:</p>
+          <ul>
+            <li>Full name;</li>
+            <li>Tax ID;</li>
+            <li>Address;</li>
+            <li>Banking data;</li>
+            <li>Real-time location;</li>
+            <li>Contacts;</li>
+            <li>Personal photos;</li>
+            <li>Health information;</li>
+            <li>Biometric data;</li>
+            <li>Workout data on external servers.</li>
+          </ul>
+          <p>The app also does not require account creation.</p>
+
+          <h2>3. Offline Functionality</h2>
+          <p>Most app features work without an internet connection.</p>
+          <p>Users can access workouts, exercises, and history even while offline.</p>
+          <p>An internet connection may be required only to load exercise animations (GIFs) or external content related to the exercise catalog.</p>
+
+          <h2>4. Data Sharing</h2>
+          <p>The app does not sell, share, or transfer user personal data to third parties.</p>
+          <p>Since data remains stored locally on the device, only the user has access to their registered information.</p>
+
+          <h2>5. Backup and Device Change</h2>
+          <p>When changing devices, users should use Android or iOS migration/backup features to preserve their data.</p>
+          <p>Correct data transfer depends on using official operating system tools.</p>
+
+          <h2>6. Security</h2>
+          <p>The app seeks to follow good development practices to protect information stored locally on the user's device.</p>
+          <p>However, no electronic storage method is completely risk-free. Users are also responsible for keeping their device protected.</p>
+
+          <h2>7. Third-Party Services</h2>
+          <p>The app may use external services only for specific features, such as loading exercise images or animations.</p>
+          <p>These services may have their own privacy policies.</p>
+
+          <h2>8. Children's Privacy</h2>
+          <p>The app is not specifically directed to children under 13 and does not intentionally collect children's personal data.</p>
+
+          <h2>9. Changes to this Policy</h2>
+          <p>This Privacy Policy may be updated periodically.</p>
+          <p>Any future changes will be published in this same section of the app or on an official app-related page.</p>
+
+          <h2>10. Contact</h2>
+          <p>If you have questions, suggestions, or requests related to privacy, contact us through the app's official channels:</p>
+          <p>instagram: @workoutcatalog.app (<a href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/workoutcatalog.app/</a>)</p>
+          <p>email: b2m.desenvolvimento@gmail.com (<a href="mailto:b2m.desenvolvimento@gmail.com">mailto:b2m.desenvolvimento@gmail.com</a>)</p>
+          <p>phone: +55 (99) 98423-5600 (<a href="tel:5599984235600">tel:5599984235600</a>)</p>
+          <p>whatsapp: +55 (99) 98423-5600 (<a href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">https://wa.me/5599984235600</a>)</p>
+
+          <p>By using Workout Catalog, you declare that you are aware of this Privacy Policy.</p>
+        `
+      },
+      es: {
+        title: "Política de Privacidad - Workout Catalog",
+        languageLabel: "Idioma",
+        html: `
+          <p><strong>Última actualización:</strong> 26 de mayo de 2026</p>
+          <p>Bienvenido a la aplicación Workout Catalog.</p>
+          <p>Tu privacidad es importante. Esta Política de Privacidad explica cómo la aplicación recopila, utiliza, almacena y protege la información de los usuarios.</p>
+          <p>Al utilizar la aplicación, aceptas los términos de esta Política de Privacidad.</p>
+
+          <h2>1. Información recopilada</h2>
+          <p>La aplicación fue desarrollada para funcionar con la mínima recopilación de datos posible.</p>
+          <p><strong>Datos almacenados localmente</strong></p>
+          <p>La aplicación permite al usuario:</p>
+          <ul>
+            <li>Crear entrenamientos personalizados;</li>
+            <li>Editar ejercicios;</li>
+            <li>Registrar series, repeticiones, peso, duración y observaciones;</li>
+            <li>Organizar sus rutinas de entrenamiento.</li>
+          </ul>
+          <p>Estos datos se almacenan localmente en el dispositivo del usuario y no se envían a servidores externos.</p>
+
+          <h2>2. Datos NO recopilados</h2>
+          <p>La aplicación no recopila:</p>
+          <ul>
+            <li>Nombre completo;</li>
+            <li>Documento fiscal;</li>
+            <li>Dirección;</li>
+            <li>Datos bancarios;</li>
+            <li>Ubicación en tiempo real;</li>
+            <li>Contactos;</li>
+            <li>Fotos personales;</li>
+            <li>Información de salud;</li>
+            <li>Datos biométricos;</li>
+            <li>Datos de entrenamiento en servidores externos.</li>
+          </ul>
+          <p>La aplicación tampoco exige la creación de una cuenta.</p>
+
+          <h2>3. Funcionamiento sin conexión</h2>
+          <p>Gran parte de las funcionalidades de la aplicación funciona sin conexión a internet.</p>
+          <p>El usuario puede acceder a sus entrenamientos, ejercicios e historial incluso sin conexión.</p>
+          <p>La conexión a internet puede ser necesaria solo para cargar animaciones (GIF) de ejercicios o contenido externo relacionado con el catálogo de ejercicios.</p>
+
+          <h2>4. Compartición de datos</h2>
+          <p>La aplicación no vende, comparte ni transfiere datos personales de los usuarios a terceros.</p>
+          <p>Como los datos permanecen almacenados localmente en el dispositivo, solo el propio usuario tiene acceso a su información registrada.</p>
+
+          <h2>5. Copia de seguridad y cambio de dispositivo</h2>
+          <p>Al cambiar de dispositivo, el usuario debe utilizar los recursos de migración o copia de seguridad disponibles en Android o iOS para preservar sus datos.</p>
+          <p>La transferencia correcta de datos depende del uso de las herramientas oficiales del sistema operativo.</p>
+
+          <h2>6. Seguridad</h2>
+          <p>La aplicación busca utilizar buenas prácticas de desarrollo para proteger la información almacenada localmente en el dispositivo del usuario.</p>
+          <p>Sin embargo, ninguna forma de almacenamiento electrónico está totalmente libre de riesgos. El usuario también es responsable de mantener su dispositivo protegido.</p>
+
+          <h2>7. Servicios de terceros</h2>
+          <p>La aplicación puede utilizar servicios externos solo para funcionalidades específicas, como la carga de imágenes o animaciones de ejercicios.</p>
+          <p>Estos servicios pueden tener sus propias políticas de privacidad.</p>
+
+          <h2>8. Privacidad infantil</h2>
+          <p>La aplicación no está dirigida específicamente a menores de 13 años y no realiza recopilación intencional de datos personales infantiles.</p>
+
+          <h2>9. Cambios en esta política</h2>
+          <p>Esta Política de Privacidad puede actualizarse periódicamente.</p>
+          <p>Cualquier cambio futuro se publicará en esta misma sección de la aplicación o en una página oficial relacionada con la aplicación.</p>
+
+          <h2>10. Contacto</h2>
+          <p>En caso de dudas, sugerencias o solicitudes relacionadas con la privacidad, ponte en contacto a través de los canales oficiales de la aplicación:</p>
+          <p>instagram: @workoutcatalog.app (<a href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/workoutcatalog.app/</a>)</p>
+          <p>email: b2m.desenvolvimento@gmail.com (<a href="mailto:b2m.desenvolvimento@gmail.com">mailto:b2m.desenvolvimento@gmail.com</a>)</p>
+          <p>phone: +55 (99) 98423-5600 (<a href="tel:5599984235600">tel:5599984235600</a>)</p>
+          <p>whatsapp: +55 (99) 98423-5600 (<a href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">https://wa.me/5599984235600</a>)</p>
+
+          <p>Al utilizar Workout Catalog, declaras que conoces esta Política de Privacidad.</p>
+        `
+      },
+      de: {
+        title: "Datenschutzrichtlinie - Workout Catalog",
+        languageLabel: "Sprache",
+        html: `
+          <p><strong>Letzte Aktualisierung:</strong> 26. Mai 2026</p>
+          <p>Willkommen bei der App Workout Catalog.</p>
+          <p>Ihre Privatsphäre ist wichtig. Diese Datenschutzrichtlinie erklärt, wie die App Benutzerinformationen erhebt, verwendet, speichert und schützt.</p>
+          <p>Durch die Nutzung der App stimmen Sie den Bedingungen dieser Datenschutzrichtlinie zu.</p>
+
+          <h2>1. Erhobene Informationen</h2>
+          <p>Die App wurde so entwickelt, dass möglichst wenige Daten erhoben werden.</p>
+          <p><strong>Lokal gespeicherte Daten</strong></p>
+          <p>Die App ermöglicht es dem Benutzer:</p>
+          <ul>
+            <li>Individuelle Trainings zu erstellen;</li>
+            <li>Übungen zu bearbeiten;</li>
+            <li>Sätze, Wiederholungen, Gewicht, Dauer und Notizen zu erfassen;</li>
+            <li>Trainingsroutinen zu organisieren.</li>
+          </ul>
+          <p>Diese Daten werden lokal auf dem Gerät des Benutzers gespeichert und nicht an externe Server gesendet.</p>
+
+          <h2>2. NICHT erhobene Daten</h2>
+          <p>Die App erhebt nicht:</p>
+          <ul>
+            <li>Vollständiger Name;</li>
+            <li>Steuer-ID;</li>
+            <li>Adresse;</li>
+            <li>Bankdaten;</li>
+            <li>Echtzeitstandort;</li>
+            <li>Kontakte;</li>
+            <li>Persönliche Fotos;</li>
+            <li>Gesundheitsinformationen;</li>
+            <li>Biometrische Daten;</li>
+            <li>Trainingsdaten auf externen Servern.</li>
+          </ul>
+          <p>Die App erfordert außerdem keine Kontoerstellung.</p>
+
+          <h2>3. Offline-Funktion</h2>
+          <p>Ein Großteil der Funktionen der App funktioniert ohne Internetverbindung.</p>
+          <p>Benutzer können auch offline auf ihre Trainings, Übungen und Verlaufsdaten zugreifen.</p>
+          <p>Eine Internetverbindung kann nur erforderlich sein, um Übungsanimationen (GIFs) oder externe Inhalte im Zusammenhang mit dem Übungskatalog zu laden.</p>
+
+          <h2>4. Datenweitergabe</h2>
+          <p>Die App verkauft, teilt oder überträgt keine personenbezogenen Daten der Benutzer an Dritte.</p>
+          <p>Da die Daten lokal auf dem Gerät gespeichert bleiben, hat nur der Benutzer selbst Zugriff auf die gespeicherten Informationen.</p>
+
+          <h2>5. Backup und Gerätewechsel</h2>
+          <p>Beim Wechsel des Geräts sollte der Benutzer die von Android oder iOS bereitgestellten Migrations- oder Backup-Funktionen nutzen, um Daten zu erhalten.</p>
+          <p>Die korrekte Datenübertragung hängt von der Nutzung der offiziellen Betriebssystem-Tools ab.</p>
+
+          <h2>6. Sicherheit</h2>
+          <p>Die App bemüht sich, bewährte Entwicklungspraktiken zu verwenden, um lokal gespeicherte Informationen auf dem Gerät des Benutzers zu schützen.</p>
+          <p>Dennoch ist keine elektronische Speichermethode vollständig risikofrei. Der Benutzer ist ebenfalls dafür verantwortlich, sein Gerät zu schützen.</p>
+
+          <h2>7. Dienste von Drittanbietern</h2>
+          <p>Die App kann externe Dienste nur für bestimmte Funktionen verwenden, z. B. zum Laden von Übungsbildern oder Animationen.</p>
+          <p>Diese Dienste können eigene Datenschutzrichtlinien haben.</p>
+
+          <h2>8. Datenschutz von Kindern</h2>
+          <p>Die App richtet sich nicht speziell an Kinder unter 13 Jahren und erhebt nicht absichtlich personenbezogene Daten von Kindern.</p>
+
+          <h2>9. Änderungen dieser Richtlinie</h2>
+          <p>Diese Datenschutzrichtlinie kann regelmäßig aktualisiert werden.</p>
+          <p>Alle zukünftigen Änderungen werden in diesem Abschnitt der App oder auf einer offiziellen appbezogenen Seite veröffentlicht.</p>
+
+          <h2>10. Kontakt</h2>
+          <p>Bei Fragen, Vorschlägen oder Anfragen zum Datenschutz kontaktieren Sie uns über die offiziellen Kanäle der App:</p>
+          <p>instagram: @workoutcatalog.app (<a href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/workoutcatalog.app/</a>)</p>
+          <p>email: b2m.desenvolvimento@gmail.com (<a href="mailto:b2m.desenvolvimento@gmail.com">mailto:b2m.desenvolvimento@gmail.com</a>)</p>
+          <p>phone: +55 (99) 98423-5600 (<a href="tel:5599984235600">tel:5599984235600</a>)</p>
+          <p>whatsapp: +55 (99) 98423-5600 (<a href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">https://wa.me/5599984235600</a>)</p>
+
+          <p>Mit der Nutzung von Workout Catalog erklären Sie, dass Sie diese Datenschutzrichtlinie zur Kenntnis genommen haben.</p>
+        `
+      },
+      fr: {
+        title: "Politique de Confidentialité - Workout Catalog",
+        languageLabel: "Langue",
+        html: `
+          <p><strong>Dernière mise à jour :</strong> 26 mai 2026</p>
+          <p>Bienvenue dans l'application Workout Catalog.</p>
+          <p>Votre vie privée est importante. Cette Politique de Confidentialité explique comment l'application collecte, utilise, stocke et protège les informations des utilisateurs.</p>
+          <p>En utilisant l'application, vous acceptez les conditions de cette Politique de Confidentialité.</p>
+
+          <h2>1. Informations collectées</h2>
+          <p>L'application a été développée pour fonctionner avec un minimum de collecte de données.</p>
+          <p><strong>Données stockées localement</strong></p>
+          <p>L'application permet à l'utilisateur de :</p>
+          <ul>
+            <li>Créer des entraînements personnalisés ;</li>
+            <li>Modifier des exercices ;</li>
+            <li>Enregistrer séries, répétitions, poids, durée et notes ;</li>
+            <li>Organiser ses routines d'entraînement.</li>
+          </ul>
+          <p>Ces données sont stockées localement sur l'appareil de l'utilisateur et ne sont pas envoyées vers des serveurs externes.</p>
+
+          <h2>2. Données NON collectées</h2>
+          <p>L'application ne collecte pas :</p>
+          <ul>
+            <li>Nom complet ;</li>
+            <li>Identifiant fiscal ;</li>
+            <li>Adresse ;</li>
+            <li>Données bancaires ;</li>
+            <li>Localisation en temps réel ;</li>
+            <li>Contacts ;</li>
+            <li>Photos personnelles ;</li>
+            <li>Informations de santé ;</li>
+            <li>Données biométriques ;</li>
+            <li>Données d'entraînement sur des serveurs externes.</li>
+          </ul>
+          <p>L'application n'exige pas non plus la création d'un compte.</p>
+
+          <h2>3. Fonctionnement hors ligne</h2>
+          <p>Une grande partie des fonctionnalités de l'application fonctionne sans connexion internet.</p>
+          <p>L'utilisateur peut accéder à ses entraînements, exercices et historique même hors ligne.</p>
+          <p>La connexion internet peut être nécessaire uniquement pour charger des animations (GIF) d'exercices ou des contenus externes liés au catalogue d'exercices.</p>
+
+          <h2>4. Partage des données</h2>
+          <p>L'application ne vend, ne partage et ne transfère pas les données personnelles des utilisateurs à des tiers.</p>
+          <p>Comme les données restent stockées localement sur l'appareil, seul l'utilisateur lui-même a accès aux informations enregistrées.</p>
+
+          <h2>5. Sauvegarde et changement d'appareil</h2>
+          <p>Lors d'un changement d'appareil, l'utilisateur doit utiliser les fonctions de migration ou de sauvegarde proposées par Android ou iOS afin de préserver ses données.</p>
+          <p>Le transfert correct des données dépend de l'utilisation des outils officiels du système d'exploitation.</p>
+
+          <h2>6. Sécurité</h2>
+          <p>L'application cherche à appliquer de bonnes pratiques de développement afin de protéger les informations stockées localement sur l'appareil de l'utilisateur.</p>
+          <p>Cependant, aucune méthode de stockage électronique n'est totalement sans risque. L'utilisateur est également responsable de la protection de son appareil.</p>
+
+          <h2>7. Services tiers</h2>
+          <p>L'application peut utiliser des services externes uniquement pour des fonctionnalités spécifiques, comme le chargement d'images ou d'animations d'exercices.</p>
+          <p>Ces services peuvent avoir leurs propres politiques de confidentialité.</p>
+
+          <h2>8. Confidentialité des enfants</h2>
+          <p>L'application ne s'adresse pas spécifiquement aux enfants de moins de 13 ans et ne collecte pas intentionnellement de données personnelles d'enfants.</p>
+
+          <h2>9. Modifications de cette politique</h2>
+          <p>Cette Politique de Confidentialité peut être mise à jour périodiquement.</p>
+          <p>Toute modification future sera publiée dans cette même section de l'application ou sur une page officielle liée à l'application.</p>
+
+          <h2>10. Contact</h2>
+          <p>En cas de questions, suggestions ou demandes liées à la confidentialité, contactez-nous via les canaux officiels de l'application :</p>
+          <p>instagram: @workoutcatalog.app (<a href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/workoutcatalog.app/</a>)</p>
+          <p>email: b2m.desenvolvimento@gmail.com (<a href="mailto:b2m.desenvolvimento@gmail.com">mailto:b2m.desenvolvimento@gmail.com</a>)</p>
+          <p>phone: +55 (99) 98423-5600 (<a href="tel:5599984235600">tel:5599984235600</a>)</p>
+          <p>whatsapp: +55 (99) 98423-5600 (<a href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">https://wa.me/5599984235600</a>)</p>
+
+          <p>En utilisant Workout Catalog, vous déclarez avoir pris connaissance de cette Politique de Confidentialité.</p>
+        `
+      },
+      pt: {
+        title: "Política de Privacidade - Workout Catalog",
+        languageLabel: "Idioma",
+        html: `
+          <p><strong>Última atualização:</strong> 26 de Maio de 2026</p>
+          <p>Bem-vindo ao aplicativo Workout Catalog.</p>
+          <p>A sua privacidade é importante. Esta Política de Privacidade explica como o aplicativo coleta, utiliza, armazena e protege as informações dos usuários.</p>
+          <p>Ao utilizar o aplicativo, você concorda com os termos desta Política de Privacidade.</p>
+
+          <h2>1. Informações Coletadas</h2>
+          <p>O aplicativo foi desenvolvido para funcionar com o mínimo possível de coleta de dados.</p>
+          <p><strong>Dados armazenados localmente</strong></p>
+          <p>O aplicativo permite que o usuário:</p>
+          <ul>
+            <li>Crie treinos personalizados;</li>
+            <li>Edite exercícios;</li>
+            <li>Registre séries, repetições, peso, duração e observações;</li>
+            <li>Organize suas rotinas de treino.</li>
+          </ul>
+          <p>Esses dados são armazenados localmente no dispositivo do usuário e não são enviados para servidores externos.</p>
+
+          <h2>2. Dados NÃO Coletados</h2>
+          <p>O aplicativo não coleta:</p>
+          <ul>
+            <li>Nome completo;</li>
+            <li>CPF;</li>
+            <li>Endereço;</li>
+            <li>Dados bancários;</li>
+            <li>Localização em tempo real;</li>
+            <li>Contatos;</li>
+            <li>Fotos pessoais;</li>
+            <li>Informações de saúde;</li>
+            <li>Dados biométricos;</li>
+            <li>Dados de treino em servidores externos.</li>
+          </ul>
+          <p>O aplicativo também não exige criação de conta.</p>
+
+          <h2>3. Funcionamento Offline</h2>
+          <p>Grande parte das funcionalidades do aplicativo funciona sem conexão com a internet.</p>
+          <p>O usuário pode acessar seus treinos, exercícios e histórico mesmo offline.</p>
+          <p>A conexão com a internet pode ser necessária apenas para carregar animações (GIFs) dos exercícios ou conteúdos externos relacionados ao catálogo de exercícios.</p>
+
+          <h2>4. Compartilhamento de Dados</h2>
+          <p>O aplicativo não vende, compartilha ou transfere dados pessoais dos usuários para terceiros.</p>
+          <p>Como os dados permanecem armazenados localmente no dispositivo, somente o próprio usuário possui acesso às informações cadastradas.</p>
+
+          <h2>5. Backup e Troca de Dispositivo</h2>
+          <p>Ao trocar de aparelho, o usuário deve utilizar os recursos de migração ou backup disponibilizados pelo Android ou iOS para preservar seus dados.</p>
+          <p>A transferência correta dos dados depende da utilização das ferramentas oficiais do sistema operacional.</p>
+
+          <h2>6. Segurança</h2>
+          <p>O aplicativo busca utilizar boas práticas de desenvolvimento para proteger as informações armazenadas localmente no dispositivo do usuário.</p>
+          <p>No entanto, nenhuma forma de armazenamento eletrônico é totalmente livre de riscos. O usuário também é responsável por manter seu aparelho protegido.</p>
+
+          <h2>7. Serviços de Terceiros</h2>
+          <p>O aplicativo pode utilizar serviços externos apenas para funcionalidades específicas, como carregamento de imagens ou animações de exercícios.</p>
+          <p>Esses serviços podem possuir políticas próprias de privacidade.</p>
+
+          <h2>8. Privacidade Infantil</h2>
+          <p>O aplicativo não é direcionado especificamente para crianças menores de 13 anos e não realiza coleta intencional de dados pessoais infantis.</p>
+
+          <h2>9. Alterações nesta Política</h2>
+          <p>Esta Política de Privacidade poderá ser atualizada periodicamente.</p>
+          <p>Quaisquer alterações futuras serão publicadas nesta mesma seção do aplicativo ou página oficial relacionada ao aplicativo.</p>
+
+          <h2>10. Contato</h2>
+          <p>Em caso de dúvidas, sugestões ou solicitações relacionadas à privacidade, entre em contato através dos canais oficiais do aplicativo:</p>
+          <p>instagram: @workoutcatalog.app (<a href="https://www.instagram.com/workoutcatalog.app/" target="_blank" rel="noopener noreferrer">https://www.instagram.com/workoutcatalog.app/</a>)</p>
+          <p>email: b2m.desenvolvimento@gmail.com (<a href="mailto:b2m.desenvolvimento@gmail.com">mailto:b2m.desenvolvimento@gmail.com</a>)</p>
+          <p>phone: +55 (99) 98423-5600 (<a href="tel:5599984235600">tel:5599984235600</a>)</p>
+          <p>whatsapp: +55 (99) 98423-5600 (<a href="https://wa.me/5599984235600" target="_blank" rel="noopener noreferrer">https://wa.me/5599984235600</a>)</p>
+
+          <p>Ao utilizar o Workout Catalog, você declara estar ciente desta Política de Privacidade.</p>
+        `
+      }
+    };
+
+    const languageSelect = document.getElementById("language");
+    const policyTitle = document.getElementById("policyTitle");
+    const policyContent = document.getElementById("policyContent");
+    const languageLabel = document.querySelector("label[for='language']");
+
+    function renderPolicy(language) {
+      const policy = policies[language] || policies.en;
+      document.documentElement.lang = language;
+      policyTitle.textContent = policy.title;
+      languageLabel.textContent = policy.languageLabel;
+      policyContent.innerHTML = policy.html;
+    }
+
+    languageSelect.addEventListener("change", (event) => {
+      renderPolicy(event.target.value);
+    });
+
+    languageSelect.value = "pt";
+    renderPolicy("pt");
+  </script>
+</body>
+</html>
