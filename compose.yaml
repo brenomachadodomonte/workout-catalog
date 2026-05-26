@@ -17,6 +17,8 @@ services:
       - "traefik.http.routers.workout-catalog-http.middlewares=rato-https-redirect"
     networks:
       - traefik-public
+    volumes:
+      - ./html:/usr/share/nginx/html:ro
 networks:
   traefik-public:
     external: true
