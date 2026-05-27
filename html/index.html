@@ -72,12 +72,24 @@
 
     .store-btn {
       display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
       border-radius: 14px;
-      padding: 14px 16px;
+      padding: 12px 16px;
       border: 1px solid rgba(255, 255, 255, 0.14);
       background: rgba(15, 23, 42, 0.8);
       transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .store-btn svg {
+      width: 32px;
+      height: 32px;
+    }
+
+    .store-content {
+      display: grid;
     }
 
     .store-btn:hover,
@@ -171,14 +183,20 @@
       </div>
 
       <div class="store-buttons">
-        <a class="store-btn app-store" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" aria-label="Download on App Store">
-          <span class="store-label">Download on</span>
-          <span class="store-name">App Store</span>
+        <a class="store-btn app-store" href="https://apps.apple.com/br/app/workoutcatalog/id6767911903" target="_blank" rel="noopener noreferrer" aria-label="Download on App Store">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" color="currentColor" viewBox="0 0 24 24" class="svg-icon text-blue-500 text-8xl" data-component-name="Icon-Huge" data-name="Huge--AppStore"><path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z"></path><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11 7 1 1.667M17 17l-3.6-6M13 7 7 17M6.5 14h6m5 0h-2"></path></svg>
+          <div class="store-content">
+            <span class="store-label">Download on</span>
+            <span class="store-name">App Store</span>
+          </div>
         </a>
 
-        <a class="store-btn play-store" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
-          <span class="store-label">Download on</span>
-          <span class="store-name">Google Play</span>
+        <a class="store-btn play-store" href="https://play.google.com/store/apps/details?id=dev.brenomachado.workoutcatalog" target="_blank" rel="noopener noreferrer" aria-label="Get it on Google Play">
+          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="none" color="currentColor" viewBox="0 0 24 24" class="svg-icon text-emerald-500 text-8xl" data-component-name="Icon-Huge" data-name="Huge--PlayStore"><path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M17.94 12.431c-.233.952-1.474 1.636-3.955 3.003-2.7 1.488-4.049 2.231-5.142 1.945a2.7 2.7 0 0 1-.998-.5C7 16.197 7 14.778 7 11.94 7 9.102 7 7.683 7.845 7c.287-.231.628-.402.998-.499 1.093-.287 2.443.457 5.142 1.944 2.482 1.368 3.722 2.052 3.956 3.004.079.324.079.66 0 .983ZM8 17l8-7.386M8 7l8 7.386"></path><path stroke="currentColor" stroke-linejoin="round" stroke-width="1.5" d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12Z"></path></svg>
+          <div class="store-content">
+            <span class="store-label">Download on</span>
+            <span class="store-name">Google Play</span>
+          </div>
         </a>
       </div>
 
