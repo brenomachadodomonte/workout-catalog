@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Workout Catalog...</title>
+    <script>
+        (function() {
+            var iosUrl = "https://apps.apple.com/br/app/workoutcatalog/id6767911903";
+            var androidUrl = "https://play.google.com/store/apps/details?id=dev.brenomachado.workoutcatalog";
+            var fallbackUrl = "https://workoutcatalog.com/";
+
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // iOS detection
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.replace(iosUrl);
+                return;
+            }
+
+            // Android detection
+            if (/android/i.test(userAgent)) {
+                window.location.replace(androidUrl);
+                return;
+            }
+
+            // Fallback
+            window.location.replace(fallbackUrl);
+        })();
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .message {
+            text-align: center;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <h1>Redirecting...</h1>
+        <p>If you are not redirected, <a id="manual-link" href="https://workoutcatalog.com/">click here</a>.</p>
+    </div>
+    <script>
+        // Update manual link based on OS if redirection didn't happen immediately
+        (function() {
+            var iosUrl = "https://apps.apple.com/br/app/workoutcatalog/id6767911903";
+            var androidUrl = "https://play.google.com/store/apps/details?id=dev.brenomachado.workoutcatalog";
+            var fallbackUrl = "https://workoutcatalog.com/";
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var link = document.getElementById('manual-link');
+
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                link.href = iosUrl;
+            } else if (/android/i.test(userAgent)) {
+                link.href = androidUrl;
+            } else {
+                link.href = fallbackUrl;
+            }
+        })();
+    </script>
+</body>
+</html>
