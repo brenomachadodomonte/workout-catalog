@@ -54,6 +54,16 @@
         <p>If you are not redirected, <a id="manual-link" href="https://workoutcatalog.com/">click here</a>.</p>
     </div>
     <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1073165735104616');
+        fbq('track', 'InitiateCheckout');
         // Update manual link based on OS if redirection didn't happen immediately
         (function() {
             var iosUrl = "https://apps.apple.com/br/app/workoutcatalog/id6767911903";
@@ -71,5 +81,8 @@
             }
         })();
     </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1073165735104616&ev=InitiateCheckout&noscript=1"/>
+    </noscript>
 </body>
 </html>
