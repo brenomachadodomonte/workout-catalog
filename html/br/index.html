@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Workout Catalog — Treine do seu jeito</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          amber: { 50:'#fffbeb',100:'#fef3c7',200:'#fde68a',300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f' }
+        },
+        fontFamily: {
+          grotesk: ['"Space Grotesk"','ui-sans-serif','system-ui','sans-serif'],
+          inter: ['Inter','ui-sans-serif','system-ui','sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family:'Inter',sans-serif; }
+  .font-grotesk { font-family:'Space Grotesk',sans-serif; }
+  ::-webkit-scrollbar { display:none; }
+  .snap-row { scroll-snap-type:x mandatory; -ms-overflow-style:none; scrollbar-width:none; }
+  .snap-item { scroll-snap-align:start; }
+  details > summary { list-style:none; }
+  details > summary::-webkit-details-marker { display:none; }
+  details[open] .chev { transform: rotate(180deg); }
+</style>
+<!-- Código Base do Pixel da Meta -->
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1083461497991158');
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://placehold.co/1x1/e8e6e3/e8e6e3"/>
+</noscript>
+</head>
+<body class="bg-neutral-950 text-white antialiased">
+
+<div class="max-w-[480px] mx-auto min-h-screen relative pb-24">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-30 bg-neutral-950/95 backdrop-blur border-b border-neutral-800">
+    <div class="flex items-center justify-between px-5 py-3">
+      <div class="flex items-center gap-2">
+        <div class="w-7 h-7 bg-amber-400 rounded-sm flex items-center justify-center">
+          <i class="fa-solid fa-dumbbell text-neutral-950 text-xs"></i>
+        </div>
+        <span class="font-grotesk font-semibold text-sm tracking-tight">WORKOUT CATALOG</span>
+      </div>
+      <a href="https://workoutcatalog.com/download.html" class="text-xs font-semibold text-amber-400 border border-amber-400 rounded-sm px-3 py-1.5">Baixar</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="px-5 pt-8 pb-6">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-3">Aplicativo móvel de treino</p>
+    <h1 class="font-grotesk text-4xl font-bold leading-[1.05] tracking-tight text-balance">Treine do seu jeito. Sem mensalidades.</h1>
+    <p class="mt-4 text-neutral-400 text-sm leading-relaxed max-w-prose text-pretty">Mais de 200 treinos por nível e objetivo, 1.300 exercícios animados e a possibilidade de criar seus próprios treinos — ou gerá-los com IA. Um pagamento único, acesso vitalício.</p>
+
+    <div class="mt-6 rounded-sm overflow-hidden border border-neutral-800">
+      <img src="hero.webp" alt="mobile app home screen showing list of workout routines filtered by level and goal" class="w-full h-72 object-cover">
+    </div>
+
+    <a href="https://workoutcatalog.com/download.html" class="mt-5 flex items-center justify-center gap-2 bg-amber-400 text-neutral-950 font-grotesk font-bold text-sm rounded-sm py-3.5">
+      Baixar por R$ 49,90 · Pagamento único
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+    <p class="mt-2 text-center text-[11px] text-neutral-500">Sem assinaturas · Sem taxas ocultas</p>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section class="grid grid-cols-3 divide-x divide-neutral-800 border-y border-neutral-800">
+    <div class="py-4 text-center">
+      <p class="font-grotesk text-xl font-bold tabular-nums">200+</p>
+      <p class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Treinos</p>
+    </div>
+    <div class="py-4 text-center">
+      <p class="font-grotesk text-xl font-bold tabular-nums">1.300+</p>
+      <p class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Exercícios</p>
+    </div>
+    <div class="py-4 text-center">
+      <p class="font-grotesk text-xl font-bold tabular-nums">1</p>
+      <p class="text-[10px] uppercase tracking-widest text-neutral-500 mt-1">Pagamento único</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="px-5 py-8">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Funcionalidades</p>
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-5">Tudo o que você precisa para treinar melhor</h2>
+
+    <div class="divide-y divide-neutral-800 border-t border-b border-neutral-800">
+      <div class="flex gap-4 py-4">
+        <div class="w-9 h-9 shrink-0 bg-neutral-900 rounded-sm flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Mais de 200 treinos</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">Filtrados por nível — iniciante, intermediário, avançado — e por objetivo: hipertrofia, emagrecimento, resistência ou força.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 py-4">
+        <div class="w-9 h-9 shrink-0 bg-neutral-900 rounded-sm flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-person-running"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">1.300+ exercícios animados</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">Cada exercício inclui uma animação em GIF que mostra a execução correta, passo a passo.</p>
+        </div>
+      </div>
+      <div class="flex gap-4 py-4">
+        <div class="w-9 h-9 shrink-0 bg-neutral-900 rounded-sm flex items-center justify-center text-amber-400">
+          <i class="fa-solid fa-pen-ruler"></i>
+        </div>
+        <div>
+          <p class="font-semibold text-sm">Crie seus próprios treinos</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">Monte rotinas personalizadas escolhendo exercícios do catálogo e organizando do seu jeito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="py-8">
+    <div class="px-5">
+      <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Capturas de tela</p>
+      <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-5">Veja como é o app</h2>
+    </div>
+    <div class="flex gap-3 overflow-x-auto snap-row px-5 pb-2">
+      <img src="screenshot-1.webp" alt="mobile app screen showing workout list with level and goal filters" class="snap-item w-[220px] h-[440px] object-cover rounded-sm border border-neutral-800 shrink-0">
+      <img src="screenshot-2.webp" alt="phone screen displaying animated exercise demonstration with muscle diagram" class="snap-item w-[220px] h-[440px] object-cover rounded-sm border border-neutral-800 shrink-0">
+      <img src="screenshot-3.webp" alt="app screen showing custom workout builder with exercise list" class="snap-item w-[220px] h-[440px] object-cover rounded-sm border border-neutral-800 shrink-0">
+      <img src="screenshot-4.webp" alt="mobile screen showing fitness calculator tools menu" class="snap-item w-[220px] h-[440px] object-cover rounded-sm border border-neutral-800 shrink-0">
+      <img src="screenshot-5.webp" alt="app screen showing file import screen for a generated workout routine" class="snap-item w-[220px] h-[440px] object-cover rounded-sm border border-neutral-800 shrink-0">
+    </div>
+  </section>
+
+  <!-- AI WORKOUTS -->
+  <section class="px-5 py-8 bg-neutral-900 border-y border-neutral-800">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Novidade</p>
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-2 text-balance">Crie treinos com IA</h2>
+    <p class="text-neutral-400 text-sm leading-relaxed mb-6 text-pretty">Baixe um modelo em formato .md, peça para sua IA favorita (ChatGPT, Claude, Gemini) montar sua rotina ideal, e depois importe o arquivo gerado direto no app.</p>
+
+    <div class="space-y-4">
+      <div class="flex gap-4">
+        <div class="w-8 h-8 shrink-0 bg-amber-400 text-neutral-950 rounded-sm flex items-center justify-center font-grotesk font-bold text-sm">1</div>
+        <div>
+          <p class="font-semibold text-sm">Baixe o modelo</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">O app te dá um arquivo .md pronto para usar com qualquer IA.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-8 h-8 shrink-0 bg-amber-400 text-neutral-950 rounded-sm flex items-center justify-center font-grotesk font-bold text-sm">2</div>
+        <div>
+          <p class="font-semibold text-sm">Peça sua rotina para a IA</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">Compartilhe o arquivo com sua IA e descreva seu objetivo, nível e dias disponíveis.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-8 h-8 shrink-0 bg-amber-400 text-neutral-950 rounded-sm flex items-center justify-center font-grotesk font-bold text-sm">3</div>
+        <div>
+          <p class="font-semibold text-sm">Importe o resultado</p>
+          <p class="text-neutral-500 text-xs mt-1 leading-relaxed">A IA gera um novo arquivo que você importa diretamente no Workout Catalog.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section class="px-5 py-8">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Ferramentas</p>
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-5 text-balance">Ferramentas fitness para evoluir</h2>
+
+    <div class="grid grid-cols-2 gap-3">
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-weight-scale text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Calculadora de IMC</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-droplet text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Consumo de água</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-fire text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Taxa Metabólica Basal</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-percent text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Gordura corporal</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-hand-fist text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">1RM</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3">
+        <i class="fa-solid fa-bowl-food text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Macronutrientes</p>
+      </div>
+      <div class="border border-neutral-800 rounded-sm p-3 col-span-2">
+        <i class="fa-solid fa-stopwatch text-amber-400 mb-2"></i>
+        <p class="text-xs font-semibold">Temporizador de treino</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="preco" class="px-5 py-8 bg-neutral-900 border-y border-neutral-800">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Preço</p>
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-5">Um único pagamento. Acesso vitalício.</h2>
+
+    <div class="border border-amber-400 rounded-sm p-5 bg-neutral-950">
+      <div class="flex items-baseline gap-2">
+        <span class="font-grotesk text-4xl font-bold tabular-nums">R$ 49,90</span>
+        <span class="text-neutral-500 text-xs">pagamento único</span>
+      </div>
+      <p class="text-neutral-500 text-xs mt-1">Sem mensalidades. Sem taxas ocultas. Sem pegadinhas.</p>
+
+      <div class="mt-5 space-y-2.5">
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-check text-amber-400 text-xs"></i>
+          <span>Acesso completo vitalício</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-check text-amber-400 text-xs"></i>
+          <span>200+ treinos e 1.300+ exercícios</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-check text-amber-400 text-xs"></i>
+          <span>Criador de treinos próprios e com IA</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-check text-amber-400 text-xs"></i>
+          <span>Todas as ferramentas fitness inclusas</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-check text-amber-400 text-xs"></i>
+          <span>Sem renovações ou cobranças futuras</span>
+        </div>
+      </div>
+
+      <a href="https://workoutcatalog.com/download.html" class="mt-5 flex items-center justify-center gap-2 bg-amber-400 text-neutral-950 font-grotesk font-bold text-sm rounded-sm py-3.5">
+        Obter acesso vitalício
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="px-5 py-8">
+    <p class="text-xs uppercase tracking-widest text-amber-400 font-semibold mb-1">Perguntas frequentes</p>
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-5">Tudo o que você precisa saber</h2>
+
+    <div class="divide-y divide-neutral-800 border-t border-b border-neutral-800">
+      <details class="py-4 group">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="text-sm font-semibold pr-4">É realmente um pagamento único?</span>
+          <i class="fa-solid fa-chevron-down text-amber-400 text-xs chev transition-transform"></i>
+        </summary>
+        <p class="text-neutral-500 text-xs mt-3 leading-relaxed">Sim. Você paga R$ 49,90 uma única vez e tem acesso a todas as funções para sempre, sem mensalidades ou renovações.</p>
+      </details>
+      <details class="py-4 group">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="text-sm font-semibold pr-4">Preciso de internet para usar o app?</span>
+          <i class="fa-solid fa-chevron-down text-amber-400 text-xs chev transition-transform"></i>
+        </summary>
+        <p class="text-neutral-500 text-xs mt-3 leading-relaxed">Não. Os treinos, exercícios e ferramentas estão disponíveis offline após o download do app.</p>
+      </details>
+      <details class="py-4 group">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="text-sm font-semibold pr-4">Como funciona a criação de treinos com IA?</span>
+          <i class="fa-solid fa-chevron-down text-amber-400 text-xs chev transition-transform"></i>
+        </summary>
+        <p class="text-neutral-500 text-xs mt-3 leading-relaxed">Você baixa um modelo .md no app, envia para qualquer IA de texto, e depois importa o arquivo de treino que a IA gerar.</p>
+      </details>
+      <details class="py-4 group">
+        <summary class="flex items-center justify-between cursor-pointer">
+          <span class="text-sm font-semibold pr-4">É compatível com iOS e Android?</span>
+          <i class="fa-solid fa-chevron-down text-amber-400 text-xs chev transition-transform"></i>
+        </summary>
+        <p class="text-neutral-500 text-xs mt-3 leading-relaxed">Sim, o Workout Catalog está disponível para os dois sistemas operacionais com a mesma compra.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="px-5 py-10 text-center">
+    <h2 class="font-grotesk text-2xl font-bold tracking-tight mb-2 text-balance">Comece a treinar hoje</h2>
+    <p class="text-neutral-500 text-sm mb-6">Um pagamento de R$ 49,90. Acesso vitalício.</p>
+    <a href="https://workoutcatalog.com/download.html" class="flex items-center justify-center gap-2 bg-amber-400 text-neutral-950 font-grotesk font-bold text-sm rounded-sm py-3.5">
+      Baixar Workout Catalog
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </section>
+
+  <footer class="px-5 py-6 border-t border-neutral-800 text-center">
+    <p class="text-[11px] text-neutral-600">© 2026 Workout Catalog. Pagamento único, sem assinaturas.</p>
+  </footer>
+
+</div>
+
+<!-- STICKY BOTTOM BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-40 max-w-[480px] mx-auto bg-neutral-900 border-t border-neutral-800 px-5 py-3 flex items-center justify-between">
+  <div>
+    <p class="font-grotesk font-bold text-sm">R$ 49,90</p>
+    <p class="text-[10px] text-neutral-500">Pagamento único</p>
+  </div>
+  <a href="https://workoutcatalog.com/download.html" class="bg-amber-400 text-neutral-950 font-grotesk font-bold text-xs rounded-sm px-5 py-2.5">Baixar</a>
+</div>
+
+</body>
+</html>
